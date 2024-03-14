@@ -49,3 +49,18 @@ Homework Docker 4
     - docker cp <container-id>:/app/ ./ui_src
     - docker cp <container-id>:/app/ ./comment_src
   - переопределены команды запуска контейнеров с ruby на puma --debug -w 2
+
+Homework Monitoring 1
+
+- Создана ВМ в Яндекс облаке (с помощью terraform)
+- настроен docker-machine
+- через docker установлен и запущен prometheus. выполнено знакомство с интерфейсом
+- для prometheus создан Dockerfile. создан файл кнфигурации
+- создан образ prometheus. созданы образы контейнеров
+- сервис prometheus добавлен в docker-compose.yml
+- проверены health чеки микросервисов
+- добавлен node exporter. проверено поступление метрик
+- образы загружены в dockerHub
+- добавлен percona/mongodb_exporter для экспорта метрик из mongoDB
+- добавлен blackbox exporter для получения метрик о внешнем состоянии микросервисов. сконфигурировано получение метрик через модуль icmp
+- создан Makefile для сборки образов контейнеров по одному или всех сразу. загрузка образов в registry реализована
