@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  ui:
+#    volumes:
+#      - ./ui_src:.
+    command: puma --debug -w 2
+#  post:
+#    volumes:
+#      - ./post_src:.
+#  comment:
+#    volumes:
+#      - ./comment_src:.
+#    command: puma --debug -w 2
