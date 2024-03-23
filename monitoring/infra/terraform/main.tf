@@ -19,12 +19,12 @@ resource "yandex_compute_instance" "app" {
     count = var.vm_count
 
     labels = {
-        tags = "docker-monolith"
+        tags = "logging"
     }
 
     resources {
         cores = 2
-        memory = 4
+        memory = 8
     }
 
     boot_disk {

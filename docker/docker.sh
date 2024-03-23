@@ -4,7 +4,7 @@ docker-machine rm docker-host
 
 docker-machine create \
 --driver generic \
---generic-ip-address=158.160.101.55 \
+--generic-ip-address=51.250.14.147 \
 --generic-ssh-user ubuntu \
 --generic-ssh-key ~/.ssh/centhis \
 docker-host
