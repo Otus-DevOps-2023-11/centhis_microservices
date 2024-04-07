@@ -1,0 +1,43 @@
+---
+- name: install docker
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Remove swapfile from /etc/fstab
+      mount:
+        name: swap
+        fstype: swap
+        state: absent
+
+    - name: Disable swap
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0
+
+    - name: Add k8s GPG key
+      apt_key:
+        url: https://pkgs.k8s.io/core:/stable:/v1.25/deb/Release.key
+        state: present
+
+    - name: Add k8s repo
+      apt_repository:
+        repo: deb https://pkgs.k8s.io/core:/stable:/v1.25/deb/ /
+        state: present
+
+    - name: Install k8s app
+      apt:
+        name:
+          - "kubelet"
+          - "kubeadm"
+          - "kubectl"
+          - "bridge-utils"
+        update_cache: true
+
+    - name: hold k8s app
+      dpkg_selections:
+        name: "{{ item }}"
+        selection: hold
+      loop:
+        - kubelet
+        - kubeadm
+        - kubectl

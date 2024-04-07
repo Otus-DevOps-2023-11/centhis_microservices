@@ -81,3 +81,10 @@ Homework Logging 1
 - добавлен контейнер с zipkin
 - выполнена настройка пересылки событий в zipkin
 - выполнено ознакомление с трасировкой в zipkin
+
+Homework Kubernetes 1
+- Создана ветка kubernetes-1
+- Созданы manifest-файлы для микросервисов mongo, post (рабочий вариант post-deployment.yml.bak), ui, comment
+- с помощью terraform созданы 2 ВМ в облаке яндекс (рекомендуемые версии ПО больше не доступны с марта 2024 года)
+- установка и настройка кластера kubernetes осуществлялась по статье https://phoenixnap.com/kb/install-kubernetes-on-ubuntu
+- приведенный в методичке манифест не работает ввиду изменения синтаксиса манифестов. рабочий вариант post-deployment.yml.bak

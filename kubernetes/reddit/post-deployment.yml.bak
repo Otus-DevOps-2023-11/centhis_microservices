@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: post
+  template:
+    metadata:
+      name: post
+      labels:
+        name: post
+    spec:
+      containers:
+      - image: chromko/post
+        name: post
