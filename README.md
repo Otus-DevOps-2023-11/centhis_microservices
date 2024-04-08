@@ -88,3 +88,17 @@ Homework Kubernetes 1
 - с помощью terraform созданы 2 ВМ в облаке яндекс (рекомендуемые версии ПО больше не доступны с марта 2024 года)
 - установка и настройка кластера kubernetes осуществлялась по статье https://phoenixnap.com/kb/install-kubernetes-on-ubuntu
 - приведенный в методичке манифест не работает ввиду изменения синтаксиса манифестов. рабочий вариант post-deployment.yml.bak
+
+Homework Kubernetes 2
+- Создана ветка kubernetes-2
+- На локальное рабочее место установлены kubectl и minikube. В качестве локального гипервизра использован VirtualBox
+- Создан minikube кластер
+- созданы deployment манифесты для сервисов ui, comment, post и mongodb
+- созданы service мфнифесты для сервисов ui, comment, post, mongodb
+- для работы с переменными окружения созданы сервисы comment-mongodb-service и post-mongodb-service
+- запущен дашборд minikube командой minikube dashboard. выполнено ознакомление с интерфейсом
+- создан namespace dev
+- все приложения запущены в нэймспэйсе dev
+- создан kubernetes кластер в сервисе managed service for kubernetes в яндекс облаке
+- все созданые манифесты применены к созданному в яндекс облаке кластеру
+- приложение доступно по адресу http://178.154.200.234:31472/
