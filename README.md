@@ -102,3 +102,16 @@ Homework Kubernetes 2
 - создан kubernetes кластер в сервисе managed service for kubernetes в яндекс облаке
 - все созданые манифесты применены к созданному в яндекс облаке кластеру
 - приложение доступно по адресу http://178.154.200.234:31472/
+
+Homework Kubernetes 3
+- Создана ветка kubernetes-3
+- настроен loadBalancer для сервиса ui
+- установлен nginx ingress controller
+- доступ к сервису ui настроен через nginx ingress controller
+- создан TLS сертификат
+- TLS сертификат добавлен в секреты кластера
+- секрет с сертификатом добавлен в ingress controller
+- настроена политика сети
+- создан volume для хранения базы mongodb
+- создан persistentVolumeClaim - запрос на дисковое пространство в volume
+- persistentVolumeClaim добавлен в манифест mongodb
