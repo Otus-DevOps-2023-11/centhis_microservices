@@ -115,3 +115,22 @@ Homework Kubernetes 3
 - создан volume для хранения базы mongodb
 - создан persistentVolumeClaim - запрос на дисковое пространство в volume
 - persistentVolumeClaim добавлен в манифест mongodb
+
+Homework kubernetes-4
+- Создана ветка kubernetes-4
+- установлен и сконфигурирован helm
+- созданы Chart для сервисов ui, post, comment
+- созданы template для сервисов ui, post, comment
+- чарты и шаблоны параметризованы
+- определены переменные для сервисов ui, post, comment
+- написаны хэлпер функции
+- создан общий Chart для управления всеми сервисами
+- добавлен chart из общедоступного репозитория для mongodb
+- приложение установлено через общий helm chart
+- tiller установлен через плагин https://github.com/rimusz/helm-tiller
+- установлен helm v3. проверена работа через helm v3
+- в kebernetes cluster установлен gitlab. chart взят из репозитория gitlab
+- в gitlab создана группа и проекты ui, post, commit и reddit-deploy
+- в gitlab через git загружены исходные коды сервисов. в reddit-deploy загружены helm чарты
+- для сервисов созданы .gitlab-ci.yml для запуска CI/CD
+- в gitlab настроен процесс создания и удаления окружений
